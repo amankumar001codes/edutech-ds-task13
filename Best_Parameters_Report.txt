@@ -1,0 +1,29 @@
+===========================================
+BEST PARAMETERS REPORT - Task 13
+===========================================
+Dataset: Breast Cancer (sklearn built-in, 569 samples, 30 features)
+Classifier: RandomForestClassifier
+
+Baseline Test Accuracy (default params): 0.9561
+
+---- GridSearchCV ----
+Search space: n_estimators=[50, 100, 150, 200], max_depth=[None, 5, 10, 15, 20]
+Best Params: {'max_depth': None, 'n_estimators': 150}
+Best CV Accuracy: 0.9604
+Test Accuracy: 0.9561
+Time Taken: 25.36 seconds
+
+---- RandomizedSearchCV ----
+Search space: n_estimators ~ randint(50,300), max_depth ~ randint(2,30)
+n_iter: 20
+Best Params: {'max_depth': 8, 'n_estimators': 229}
+Best CV Accuracy: 0.9604
+Test Accuracy: 0.9561
+Time Taken: 35.89 seconds
+
+---- Final Selected Model ----
+Method: GridSearchCV
+Best Parameters: {'max_depth': None, 'n_estimators': 150}
+CV Accuracy: 0.9604
+Test Accuracy: 0.9561
+===========================================
